@@ -891,10 +891,9 @@ h1 {
   }
 
   .hero__palm {
-    right: -28px;
     bottom: 90px;
-    left: auto;
-    width: 165px;
+    left: 0;
+    width: 250px;
   }
 
   .hero__clouds {
