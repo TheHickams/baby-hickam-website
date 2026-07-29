@@ -1,0 +1,59 @@
+{
+  "style": "Soft watercolor coastal nursery artwork. PNGs use transparent backgrounds; SVGs are scalable.",
+  "responsiveGuidance": {
+    "desktop": "Compose the shoreline and standalone decorative assets with CSS around semantic HTML copy.",
+    "mobile": "Reposition, reduce, or hide standalone decorations rather than shrinking essential copy.",
+    "composition": "shoreline-repeatable.png is the source for the optimized WebP used by the site. seashell.png is the source for the cropped shell flourish."
+  },
+  "assets": [
+    {
+      "file": "teddy-bear.png",
+      "purpose": "Standalone character",
+      "crop": "Keep full hat and feet."
+    },
+    {
+      "file": "sandcastle-and-toys.png",
+      "purpose": "Lower-left decoration",
+      "crop": "Bottom sand may be trimmed slightly."
+    },
+    {
+      "file": "shoreline-repeatable.png",
+      "purpose": "Panoramic hero and footer shoreline source",
+      "crop": "Preserve the full horizontal scene; optimize to WebP for production."
+    },
+    {
+      "file": "palm-tree.png",
+      "purpose": "Complete palm-tree decoration",
+      "crop": "Transparent padding may be trimmed while preserving the sand base."
+    },
+    {
+      "file": "sun.png",
+      "purpose": "Upper-corner accent",
+      "crop": "Keep face intact."
+    },
+    {
+      "file": "seagulls.png",
+      "purpose": "Sky accent",
+      "crop": "Do not crop through birds."
+    },
+    {
+      "file": "cloud-bank.png",
+      "purpose": "Soft background accent",
+      "crop": "May be partially cropped or faded."
+    },
+    {
+      "file": "shells-and-starfish.png",
+      "purpose": "Lower shoreline decoration",
+      "crop": "Keep starfish intact."
+    },
+    {
+      "file": "seashell.png",
+      "purpose": "Source for the title and due-card shell flourish",
+      "crop": "Trim transparent padding while retaining both pale-blue branches."
+    },
+    {
+      "file": "wave-flourish.svg",
+      "purpose": "Lightweight divider"
+    }
+  ]
+}

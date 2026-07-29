@@ -1,0 +1,20 @@
+{
+  "babyName": "Baby Hickam",
+  "parents": ["Tyler", "Austin"],
+  "dueDate": "2027-02-09",
+  "registryUrl": "https://my.babylist.com/babyhickam",
+  "copy": {
+    "beforeDueDateMessage": "Tyler & Austin are so excited to welcome their little one.",
+    "afterDueDateMessage": "Tyler & Austin are excited to share more about Baby Hickam soon.",
+    "registry": "Your love and support mean the world to us. Gifts can be found on our Babylist registry.",
+    "shower": "We would love to celebrate this sweet new adventure with you.",
+    "note": "Thank you for being part of our journey. We cannot wait to introduce Baby Hickam to such an amazing circle of family and friends."
+  },
+  "babyShower": {
+    "enabled": true,
+    "date": "2026-12-05",
+    "time": "11:00 AM",
+    "location": "Postino B-Side\n3939 E Campbell Ave #110\nPhoenix, AZ 85018",
+    "rsvpUrl": "https://example.com/rsvp"
+  }
+}
