@@ -1,7 +1,7 @@
 {
   "babyName": "Baby Hickam",
   "parents": ["Tyler", "Austin"],
-  "dueDate": "2027-02-09",
+  "dueDate": "2027-02-11",
   "registryUrl": "https://my.babylist.com/babyhickam",
   "copy": {
     "beforeDueDateMessage": "Tyler & Austin are so excited to welcome their little one.",
