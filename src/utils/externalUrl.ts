@@ -1,7 +1,3 @@
-export function hasRsvpAccess(search: string): boolean {
-  return new URLSearchParams(search).has("rsvp");
-}
-
 export function getSafeExternalUrl(
   value: string,
   label: string,

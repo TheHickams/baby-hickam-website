@@ -1,6 +1,6 @@
 # Baby Hickam
 
-A responsive, single-page announcement site for Baby Hickam, Tyler, and Austin. The site uses a soft watercolor coastal theme, includes a public registry, and conditionally reveals baby-shower details to guests who receive an RSVP query parameter.
+A responsive announcement site for Baby Hickam, Tyler, and Austin. The site uses a soft watercolor coastal theme, includes a public registry, and presents baby-shower details on a dedicated RSVP page.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ npm ci
 npm run dev
 ```
 
-Vite prints the local URL in the terminal. To preview the guest version of the page, add any `rsvp` query parameter, for example `http://localhost:5173/?rsvp=invite-code`.
+Vite prints the local URL in the terminal. To preview the guest version of the page, visit `http://localhost:5173/rsvp`.
 
 ## Build and preview production output
 
@@ -23,7 +23,7 @@ npm run build
 npm run preview
 ```
 
-The production site is written to `dist/`.
+The production site is written to `dist/`. The build also creates `dist/rsvp/index.html` so direct visits to `/rsvp` work on GitHub Pages.
 
 ## Quality checks
 
@@ -77,9 +77,9 @@ git push origin v1.0.0
 
 The release workflow checks formatting, linting, types, tests, and the production build before uploading `dist/` with the official GitHub Pages actions.
 
-## RSVP-gating limitation
+## RSVP page limitation
 
-The baby-shower card appears only when the URL includes the `rsvp` query parameter, such as `?rsvp=LONG_RANDOM_CODE`. The parameter's value can be any string, including an empty string. This is client-side presentation gating on a static website, not authentication: it discourages casual discovery but cannot protect sensitive information from a determined visitor. Do not put private or sensitive information in the configuration or deployment bundle.
+The baby-shower card appears at `/rsvp` and is omitted from the home page. This route is public and is not authentication: anyone who knows or discovers the URL can see its contents. Do not put private or sensitive information in the configuration or deployment bundle.
 
 ## Artwork
 

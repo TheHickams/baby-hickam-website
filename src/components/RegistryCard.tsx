@@ -1,4 +1,4 @@
-import { getSafeExternalUrl } from "../utils/rsvp";
+import { getSafeExternalUrl } from "../utils/externalUrl";
 import { Icon } from "./Icon";
 import { InformationCard } from "./InformationCard";
 
