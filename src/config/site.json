@@ -13,8 +13,8 @@
   "babyShower": {
     "enabled": true,
     "date": "2026-12-05",
-    "time": "11:00 AM",
-    "location": "Postino B-Side\n3939 E Campbell Ave #110\nPhoenix, AZ 85018",
-    "rsvpUrl": "https://example.com/rsvp"
+    "time": "Early Afternoon",
+    "location": "Location Coming Soon",
+    "rsvpUrl": "https://hickambabyshower.rsvpify.com/"
   }
 }
