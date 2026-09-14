@@ -61,6 +61,10 @@ body::before {
   pointer-events: none;
 }
 
+main {
+  position: relative;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -616,6 +620,400 @@ h1 {
   flex: 0 0 auto;
 }
 
+.shower-details-jump {
+  position: fixed;
+  z-index: 8;
+  bottom: 24px;
+  left: 50%;
+  display: inline-flex;
+  min-height: 54px;
+  padding: 12px 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  background: rgba(23, 76, 95, 0.92);
+  box-shadow:
+    0 12px 30px rgba(23, 60, 80, 0.24),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-family: var(--display);
+  font-size: 1rem;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.shower-details-jump:hover {
+  transform: translate(-50%, -3px);
+  background: #1d6071;
+  box-shadow: 0 16px 34px rgba(23, 60, 80, 0.3);
+}
+
+.shower-details-jump--hidden {
+  visibility: hidden;
+  transform: translate(-50%, 12px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shower-details-jump svg {
+  width: 20px;
+  height: 20px;
+  animation: details-nudge 1.7s ease-in-out infinite;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.shower-details {
+  position: relative;
+  z-index: 1;
+  padding: 112px 32px 144px;
+  overflow: hidden;
+  isolation: isolate;
+  scroll-margin-top: 12px;
+  background:
+    radial-gradient(
+      circle at 10% 34%,
+      rgba(217, 239, 240, 0.7),
+      transparent 25rem
+    ),
+    radial-gradient(
+      circle at 92% 76%,
+      rgba(247, 201, 170, 0.42),
+      transparent 27rem
+    ),
+    linear-gradient(180deg, #fffdf9, #f9efe0 58%, #fffaf2);
+}
+
+.shower-details::before {
+  position: absolute;
+  z-index: -1;
+  top: -74px;
+  right: -3%;
+  left: -3%;
+  height: 128px;
+  border-radius: 0 0 50% 50%;
+  background: #fffdf9;
+  content: "";
+}
+
+.shower-details::after {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: -12px;
+  left: 0;
+  height: 180px;
+  background:
+    url("/assets/shells-and-starfish.png") right 6vw bottom 12px / 230px auto
+      no-repeat,
+    url("/assets/shoreline-repeatable.webp") center bottom -690px /
+      max(1536px, 100%) 1024px no-repeat;
+  content: "";
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.shower-details__intro {
+  width: min(760px, 100%);
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.shower-details__eyebrow {
+  margin-bottom: 7px;
+  color: var(--coral-deep);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.shower-details__intro h2 {
+  margin-bottom: 18px;
+  color: var(--teal-deep);
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.shower-details__intro > p:last-child {
+  margin-bottom: 0;
+  color: var(--muted-ink);
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+.shower-invitation {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(360px, 1.2fr) auto;
+  gap: clamp(28px, 4vw, 64px);
+  width: min(1160px, 100%);
+  padding: 34px clamp(28px, 4vw, 54px);
+  align-items: center;
+  margin: 0 auto 38px;
+  border: 1px solid rgba(200, 80, 66, 0.17);
+  border-radius: 30px;
+  background: rgba(255, 253, 249, 0.9);
+  box-shadow:
+    0 22px 55px rgba(82, 84, 72, 0.12),
+    inset 0 0 0 7px rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(7px);
+}
+
+.shower-invitation::before {
+  position: absolute;
+  inset: 9px;
+  border: 1px dashed rgba(235, 116, 94, 0.35);
+  border-radius: 22px;
+  content: "";
+  pointer-events: none;
+}
+
+.shower-invitation > * {
+  position: relative;
+}
+
+.shower-invitation__heading {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.shower-invitation__icon,
+.shower-note__icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fce5dc;
+  color: var(--coral-deep);
+}
+
+.shower-invitation__icon svg,
+.shower-note__icon svg,
+.shower-invitation__facts svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.shower-invitation__heading p {
+  margin-bottom: 1px;
+  color: var(--coral-deep);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.shower-invitation__heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.shower-invitation__facts {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 24px;
+  margin: 0;
+}
+
+.shower-invitation__facts > div {
+  min-width: 0;
+}
+
+.shower-invitation__facts dt {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 5px;
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.shower-invitation__facts dt svg {
+  width: 17px;
+  height: 17px;
+}
+
+.shower-invitation__facts dd {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.shower-invitation__facts dd span {
+  display: block;
+}
+
+.shower-invitation__rsvp {
+  width: 178px;
+}
+
+.shower-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.shower-note {
+  position: relative;
+  min-height: 285px;
+  padding: 37px clamp(28px, 4vw, 48px) 34px;
+  overflow: hidden;
+  border: 1px solid rgba(57, 126, 124, 0.12);
+  border-radius: 30px;
+  background: rgba(255, 253, 249, 0.82);
+  box-shadow: 0 16px 42px rgba(73, 90, 80, 0.1);
+}
+
+.shower-note::after {
+  position: absolute;
+  right: -24px;
+  bottom: -42px;
+  width: 130px;
+  height: 130px;
+  border: 1px dashed color-mix(in srgb, var(--note-accent), transparent 55%);
+  border-radius: 50%;
+  content: "";
+  opacity: 0.48;
+}
+
+.shower-note--refreshments,
+.shower-note--books {
+  --note-accent: var(--teal);
+}
+
+.shower-note--gifts,
+.shower-note--diapers {
+  --note-accent: var(--coral);
+}
+
+.shower-note__icon {
+  position: absolute;
+  top: 31px;
+  right: 31px;
+  background: color-mix(in srgb, var(--note-accent), white 82%);
+  color: var(--note-accent);
+}
+
+.shower-note__number {
+  margin-bottom: 25px;
+  color: color-mix(in srgb, var(--note-accent), transparent 20%);
+  font-family: var(--display);
+  font-size: 0.92rem;
+  letter-spacing: 0.12em;
+}
+
+.shower-note h3 {
+  max-width: calc(100% - 54px);
+  margin: 0 0 13px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1.65rem, 2.4vw, 2.15rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.shower-note > p:not(.shower-note__number) {
+  position: relative;
+  z-index: 1;
+  max-width: 31rem;
+  margin-bottom: 0;
+  color: var(--muted-ink);
+  line-height: 1.62;
+}
+
+.shower-note .shower-note__aside {
+  margin-top: 13px;
+  color: var(--ink);
+  font-weight: 550;
+}
+
+.shower-note__link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--teal-deep);
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.shower-note__link:hover {
+  color: var(--coral-deep);
+}
+
+.shower-details__closing {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 58px;
+  color: var(--coral-deep);
+  font-family: var(--display);
+  font-size: 1.22rem;
+  text-align: center;
+}
+
+.shower-details__closing p {
+  margin-bottom: 0;
+}
+
+@keyframes details-nudge {
+  0%,
+  100% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
 .event-list {
   display: grid;
   gap: 7px;
@@ -776,6 +1174,16 @@ h1 {
     right: -28px;
     width: 255px;
   }
+
+  .shower-invitation {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .shower-invitation__rsvp {
+    grid-column: 1 / -1;
+    width: min(100%, 360px);
+    justify-self: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
@@ -926,6 +1334,81 @@ h1 {
     overflow: hidden;
   }
 
+  .shower-details-jump {
+    bottom: 18px;
+    min-height: 50px;
+    padding: 10px 18px;
+    font-size: 0.96rem;
+  }
+
+  .shower-details {
+    padding: 82px 18px 105px;
+  }
+
+  .shower-details::before {
+    top: -48px;
+    height: 78px;
+  }
+
+  .shower-details::after {
+    display: none;
+  }
+
+  .shower-details__intro {
+    margin-bottom: 34px;
+  }
+
+  .shower-details__intro h2 {
+    font-size: clamp(2.4rem, 12vw, 3.45rem);
+  }
+
+  .shower-details__intro > p:last-child {
+    font-size: 1.13rem;
+  }
+
+  .shower-invitation {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 31px 27px;
+    border-radius: 25px;
+  }
+
+  .shower-invitation__facts {
+    grid-template-columns: 1fr;
+    gap: 19px;
+    padding-left: 4px;
+  }
+
+  .shower-invitation__rsvp {
+    grid-column: auto;
+  }
+
+  .shower-notes {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .shower-note {
+    min-height: 0;
+    padding: 32px 27px;
+    border-radius: 25px;
+  }
+
+  .shower-note__icon {
+    top: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .shower-note__number {
+    margin-bottom: 20px;
+  }
+
+  .shower-details__closing {
+    margin-top: 42px;
+  }
+
   .details-section::before {
     top: 2px;
     left: 0;
@@ -1035,6 +1518,7 @@ h1 {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
 }

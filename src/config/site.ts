@@ -18,6 +18,14 @@ export interface SiteConfig {
     time: string;
     location: string;
     rsvpUrl: string;
+    details: {
+      welcome: string;
+      refreshments: string;
+      gifts: string;
+      clothing: string;
+      books: string;
+      diaperRaffle: string;
+    };
   };
 }
 
@@ -101,6 +109,20 @@ function validateSiteConfig(value: unknown): asserts value is SiteConfig {
   assertNonEmptyString(shower.location, "babyShower.location");
   if (typeof shower.rsvpUrl !== "string") {
     throw new Error("site.json: babyShower.rsvpUrl must be a string.");
+  }
+  if (!shower.details || typeof shower.details !== "object") {
+    throw new Error("site.json: babyShower.details must be an object.");
+  }
+  const details = shower.details as Record<string, unknown>;
+  for (const key of [
+    "welcome",
+    "refreshments",
+    "gifts",
+    "clothing",
+    "books",
+    "diaperRaffle",
+  ]) {
+    assertNonEmptyString(details[key], `babyShower.details.${key}`);
   }
 }
 

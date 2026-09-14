@@ -15,6 +15,14 @@
     "date": "2027-01-09",
     "time": "11:00 AM",
     "location": "Mini Social\n7116 E 5th Ave,\nScottsdale, AZ 85251",
-    "rsvpUrl": "https://hickambabyshower.rsvpify.com/"
+    "rsvpUrl": "https://hickambabyshower.rsvpify.com/",
+    "details": {
+      "welcome": "We are so excited to spend the day with you and cannot wait to have all of our favorite people together to celebrate Baby Hickam.",
+      "refreshments": "Food and non-alcoholic drinks will be provided for everyone to enjoy.",
+      "gifts": "Gifts from our registry are welcome, but please do not feel obligated. Celebrating with you is what matters most to us.",
+      "clothing": "Please, no baby clothes.",
+      "books": "Please bring a favorite children’s book in place of a card. You can write a little note inside for Baby Hickam to enjoy for years to come.",
+      "diaperRaffle": "Bring a pack of diapers to be entered into our diaper raffle."
+    }
   }
 }
